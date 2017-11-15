@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <title>I Luv These Restaurants</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+          function slideSwitch() {
+              var showing = $('section#slideshow img.active'); // The showing variable points to this html element
+              var nextImg =  showing.next().length ? showing.next() : $('#slideshow img:first'); // If there is an image after the one with the 'active' class, the nextImg variable will reference that. If not, the nextImg variable references the first #slideshow image with the action class assigned to it
+
+              showing.addClass('lastShowing');              // The class 'lastShowing' is added to the showing value
+
+              nextImg.css({opacity: 0.0})                   // The nextImg variable pointing to the html element: Change the css opacity property to 0.0
+                  .addClass('active')                       // Add a 'showing' class to this html element
+                  .animate({opacity: 1.0}, 1000, function() { // The animate function animates all attributes it's assigned to; Turn the opacity from 0.0 to 1.0; Animate for one full second
+                      showing.removeClass('active lastShowing'); // After a second these two classes are removed from the #showing element
+                  });
+          }
+
+          $(function() {                                    // An anonymous function that will work right away. This function makes the following happen:
+              setInterval( "slideSwitch()", 3000 );         // An interval of five seconds
+          });
+      </script>
+
+      <style type="text/css">
+          #slideshow {
+              position:relative;
+              height:350px;
+          }
+
+          #slideshow img {
+              position:absolute;
+              top:20%;
+              left:20%;
+              z-index:8;
+              opacity:0.0;
+              width:475px;
+              height:350px;
+          }
+
+          #slideshow img.active {
+              z-index:10;
+              opacity:1.0;
+          }
+
+          #slideshow img.lastShowing {
+              z-index:9;
+          }
+      </style>
+  </head>
+
+  <body>
+          <header>
+              <h1>I Luv These Restaurants</h1>
+          </header>
+
+          <main>
+              <section id="slideshow">
+                  <img src="http://sohostrut.com/wp-content/uploads/2016/05/la-esquina.jpg" alt="Slideshow Image 1" class="active" />
+                  <img src="http://www.vkeong.com/wp-content/uploads/2017/01/Burger-Lobster-Genting-Malaysia.jpg" alt="Slideshow Image 2" />
+                  <img src="http://ourbksocial.com/wp-content/uploads/2014/08/bareburger-01.jpg" alt="Slideshow Image 3" />
+                  <img src="https://secure.parksandresorts.wdpromedia.com/resize/mwImage/1/640/360/75/wdpromedia.disney.go.com/media/wdpro-assets/gallery/dining/magic-kingdom/plaza-restaurant/plaza-restaurant-gallery06.jpg?30122013120431" alt="Slideshow Image 4" />
+              </section>
+          </main>
+
+          <footer>
+              <span>&copy; 2017 Cohort5</span>
+          </footer>
+  </body>
+</html>

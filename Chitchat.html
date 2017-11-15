@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  </head>
+  <body>
+    <div class="row text-center">
+      <div class="col-sm-12">
+    <h1>Food Questionnaire</h1>
+    <br />
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <form action="https://formspree.io/brianwilliamsdesigns7@gmail.com" method="POST">
+
+      <label for="name"></label>
+      <br />
+      <input type="text" name="name" placeholder="First">
+      <br />
+      <label for="name"></label>
+      <br />
+      <input placeholder="Last">
+      <br />
+      <label for="email"></label>
+      <br />
+       <input placeholder="Email">
+
+
+      <div>
+        <br />
+    <label for="question1">What food do you know you shouldn't eat but can't help yourself?</label>
+    <br />
+    <input type="text" name="question1" id="question1" placeholder="Your Answer?"/>
+  </div>
+  <div>
+    <br />
+    <label for="question2">What is your favorite food</label>
+    <br />
+    <input type="text" name="question2" placeholder="Your Answer?"/>
+  </div>
+  <div>
+    <br />
+  <label for="question3">Would you rather eat...</label>
+  <br />
+  <input type="radio" name="question3">Salad
+  <input type="radio" name="question3">Macaroni
+  <input type="radio" name="question3">Chicken
+</div>
+<div>
+<br />
+<label for="question4">Choose three of your favorite drinks...</label>
+<br />
+<input type="checkbox" name="question4">Water
+<input type="checkbox" name="question4">Root Beer
+<input type="checkbox" name="question4">Orange Juice
+</div>
+<div>
+  <br />
+  <label for="question5">What do you get every time you go grocery shopping?</label>
+  <br />
+  <input type="text" name="question5" placeholder="Your Answer"/>
+</div>
+<div>
+  <br />
+<label for="question6">Would you rather eat...</label>
+<br />
+<input type="radio" name="question6">Yellow Rice
+<input type="radio" name="question6">Steak
+<input type="radio" name="question6">Sweet Potatoes
+</div>
+<div>
+  <br />
+<label for="question7">Choose three of your favorite drinks...</label>
+<br />
+<input type="checkbox" name="question7">Sprite
+<input type="checkbox" name="question7">Seltzer Water
+<input type="checkbox" name="question7">Green Juice
+</div>
+<div>
+  <br />
+  <button type="submit">Submit</button>
+
+  
+ 
+<script>
+$( "form" ).submit(function( event ) {
+  var rightanswer=$("input#question1").val();
+  alert(rightanswer);
+    return;
+  
+  
+});
+</script>
+ 
+</div>
+</div>
+<div class="col-sm-3">
+  </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
